@@ -61,11 +61,11 @@ async function defaultConfig() {
     state: 'slithering',
     details: 'I\'m a snake🐍',
     startTimestamp: new Date(),
-    largeImageKey: '',
-    smallImageKey: '',
+    largeImageKey: 'gog',
+    largeImageText: `Discord Rich Presence v${version}`,
+    smallImageKey: 'bear-logo',
+    smallImageText: 'dev Lil_Bear#1450',
     partyId: 'bearys_party',
-    partySize: 1,
-    partyMax: 6,
   })
 
   // Calling the banner function
@@ -78,8 +78,11 @@ async function defaultConfig() {
   // Console.logging the Details
   console.log(color.blueBright(`Presence Title : Slitherinh`))
   console.log(color.blueBright(`Presence Description : I'm a snake🐍`))
-  console.log(color.blueBright(`Presence Party Size : 1`))
-  console.log(color.blueBright(`Presence Party Max Size`))
+
+  console.log('\n')
+  console.log(color.redBright(`Image Settings`))
+  console.log(color.blueBright(`Large Image Text : Discord Rich Presence v${version}`))
+  console.log(color.blueBright(`Small Image Text : dev Lil_Bear#1450`))
 }
 
 // Function => Custom Config
@@ -87,7 +90,9 @@ async function customConfig() {
   // defining values
   let a1;
   let a2;
-  let a3; 
+  let a3;
+  let a4;
+  let a5;
 
   // Calling the banner function
   banner()
@@ -112,26 +117,41 @@ async function customConfig() {
         if(answer.length < 2) a3 = `${answer}_party`
         else a3 = answer
 
-        // Updating values
-        client.updatePresence({
-          state: a1,
-          details: a2,
-          startTimestamp: new Date(),
-          largeImageKey: '',
-          smallImageKey: '',
-          partyId: a3,
-          partySize: 1,
-          partyMax: 6,
+        console.log(color.redBright(`Rich Presence Large Image Text : `))
+        rl.question('', (answer) => {
+          if(answer.length < 2) a4 = `Discord Rich Presence v${version}`
+          else a4 = answer
+
+          console.log(color.redBright(`Rich Presence Small Image Text : `))
+          rl.question('', (answer) => {
+            if(answer.length < 2) a5 = `Dev Lil_Bear#1450`
+            else a5 = answer
+
+            // Updating values
+            client.updatePresence({
+              state: a2,
+              details: a1,
+              startTimestamp: new Date(),
+              largeImageKey: 'gog',
+              largeImageText: a4,
+              smallImageKey: 'bear-logo',
+              smallImageText: a5,
+              partyId: a3,
+            })
+
+            console.log('\n')
+
+            // Console.logging the Details
+            console.log(color.blueBright(`Presence Title : ${a1}`))
+            console.log(color.blueBright(`Presence Description : ${a2}`))
+            console.log(color.blueBright(`Presence Party ID : ${a3}`))
+
+            console.log('\n')
+            console.log(color.redBright(`Image Settings`))
+            console.log(color.blueBright(`Large Image Text : ${a4}`))
+            console.log(color.blueBright(`Small Image Text : ${a5}`))
+          })
         })
-
-        console.log('\n')
-
-        // Console.logging the Details
-        console.log(color.blueBright(`Presence Title : ${a1}`))
-        console.log(color.blueBright(`Presence Description : ${a2}`))
-        console.log(color.blueBright(`Presence Party ID : ${a3}`))
-        console.log(color.blueBright(`Presence Party Size : 1`))
-        console.log(color.blueBright(`Presence Party Max Size : 6`))
       })
     })
   })
@@ -140,7 +160,7 @@ async function customConfig() {
 // Function => Random Config
 async function randomConfig() {
   // Defining randoms
-  const details = [
+  const states = [
     'Bear',
     'Gaming',
     'Eating',
@@ -154,7 +174,7 @@ async function randomConfig() {
     'Raft',
     'GTA V',
   ]
-  const states = [
+  const details = [
     'dev Lil_Bear#1450',
     'Dm me for questions',
     'Im just chilling',
@@ -173,11 +193,11 @@ async function randomConfig() {
     state: rState,
     details: rDetails,
     startTimestamp: new Date(),
-    largeImageKey: '',
-    smallImageKey: '',
+    largeImageKey: 'gog',
+    largeImageText: `Discord Rich Presence v${version}`,
+    smallImageKey: 'bear-logo',
+    smallImageText: 'dev Lil_Bear#1450',
     partyId: 'bearys_party',
-    partySize: 1,
-    partyMax: 6,
   })
     
   // Calling the banner function
@@ -190,8 +210,11 @@ async function randomConfig() {
   // Console.logging the Details
   console.log(color.blueBright(`Presence Title : ${rDetails}`))
   console.log(color.blueBright(`Presence Description : ${rState}`))
-  console.log(color.blueBright(`Presence Party Size : 1`))
-  console.log(color.blueBright(`Presence Party Max Size`))
+
+  console.log('\n')
+  console.log(color.redBright(`Image Settings`))
+  console.log(color.blueBright(`Large Image Text : Discord Rich Presence v${version}`))
+  console.log(color.blueBright(`Small Image Text : dev Lil_Bear#1450`))
 }
 
 async function banner() {

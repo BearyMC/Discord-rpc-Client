@@ -3,6 +3,7 @@ const client   = require('discord-rich-presence')('777249766735478806')
 const figlet   = require('figlet')
 const color    = require('chalk')
 const readline = require('readline');
+const setTitle = require('node-bash-title');
 const version  = '2.3.5'
 const rl       = readline.createInterface({ input: process.stdin, output: process.stdout })
 module.exports = async () => {
@@ -12,6 +13,9 @@ module.exports = async () => {
     console.log(color.cyan(`┌──Discord RPC v${version}───────────────────────────────────────────────────────────────Connecting...────────┐`))
     console.log(color.redBright(data))
     console.log(color.cyan(`└────────────────────────────────────────────────────────────────────────────────── by Lil_Bear#1450 ──┘`)) 
+
+    // Setting console title
+    setTitle('Discord RPC - Connecting... - dev : Lil_Bear#1450');
   })
 
   // Handling game requests
@@ -38,6 +42,9 @@ module.exports = async () => {
       console.log(color.redBright(`1) Default configuration`))
       console.log(color.redBright(`2) Random configuration`))
       console.log(color.redBright(`3) Custom configuration`))
+
+      // Setting console title
+      setTitle('Discord RPC - Connected - dev : Lil_Bear#1450');
     })
 
     rl.question('', (answer) => {

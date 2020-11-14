@@ -4,7 +4,7 @@ const figlet   = require('figlet')
 const color    = require('chalk')
 const readline = require('readline');
 const setTitle = require('node-bash-title');
-const version  = '2.3.5'
+const version  = '2.3.6'
 const rl       = readline.createInterface({ input: process.stdin, output: process.stdout })
 module.exports = async () => {
   // Making the banner

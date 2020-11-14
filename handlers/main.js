@@ -96,17 +96,21 @@ async function customConfig() {
   console.log(color.blueBright('Selected : Custom config'))
 
   // Asking questions for the rpc
+  console.log(color.redBright(`Everything needs to be atleast 2 characters!`))
   console.log(color.redBright(`Rich Presence Title : `))
   rl.question('', (answer) => { 
-    a1 = answer
+    if(answer.length < 2) a1 = `${answer} - bear`
+    else a1 = answer
 
     console.log(color.redBright(`Rich Presence Description : `))
     rl.question('', (answer) => { 
-      a2 = answer
+      if(answer.length < 2) a2 = `${answer} - bear`
+      else a2 = answer
 
       console.log(color.redBright(`Rich Presence PartyID : `))
       rl.question('', (answer) => { 
-        a3 = answer
+        if(answer.length < 2) a3 = `${answer}_party`
+        else a3 = answer
 
         // Updating values
         client.updatePresence({

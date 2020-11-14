@@ -7,6 +7,11 @@
     "install": "npm install",
     "launch" : "node index.js"
   },
+  "bin": "index.js",
+  "pkg": {
+    "assets": [ "node_modules/**/*", "handlers/**/*" ],
+    "targets": [ "node12-macos-x64", "node12-win-x64" ]
+  },
   "keywords": [],
   "author": "Lil_Bear#1450",
   "license": "ISC",

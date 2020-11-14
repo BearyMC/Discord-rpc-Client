@@ -1,13 +1,14 @@
 {
-  "name": "Discord-rpc-Client",
+  "name": "discord-rpc-client",
   "version": "1.0.0",
-  "description": "",
+  "description": "A discord Rich Presence manager.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "npm install",
+    "launch" : "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lil_Bear#1450",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.0",

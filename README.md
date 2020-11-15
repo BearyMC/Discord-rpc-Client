@@ -25,7 +25,7 @@ After that just run :
 npm run launch
 ```
 
-### Methode 3
+### Methode 2
 Running the executable found in the releases tab.
 
 ## License

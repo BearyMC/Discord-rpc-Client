@@ -7,7 +7,7 @@ Discord-RPC-Client is a used for managing personal rich presences.
 * Random Rich Presences
 * Default Rich Presence
 
-## Installatio
+## Installation
 There are a few methodes to install the package. 
 ### Methode 1
 Cloning the repository : 
